@@ -1,0 +1,15 @@
+replicaCount: 3
+image:
+  repository: ghcr.io/mdzubair933/distributed-event-mesh
+  tag: latest
+  pullPolicy: IfNotPresent
+resources:
+  limits:
+    cpu: 2000m
+    memory: 4Gi
+  requests:
+    cpu: 500m
+    memory: 1Gi
+persistence:
+  storageClass: "gp3"
+  size: 50Gi
